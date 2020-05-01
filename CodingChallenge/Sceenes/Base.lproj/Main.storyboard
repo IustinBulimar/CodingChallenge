@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpstackChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-bS-BaJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCell" rowHeight="91" id="QGu-Y8-Ojp" customClass="ActivityCell" customModule="UpstackChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QGu-Y8-Ojp" id="lOO-lf-GoS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Vv-4Z-yVG">
+                                                    <rect key="frame" x="20" y="30" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp8-Js-dNN">
+                                                    <rect key="frame" x="80" y="35" width="31" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Vv-4Z-yVG" firstAttribute="leading" secondItem="lOO-lf-GoS" secondAttribute="leadingMargin" id="3qT-EM-E01"/>
+                                                <constraint firstItem="1Vv-4Z-yVG" firstAttribute="centerY" secondItem="lOO-lf-GoS" secondAttribute="centerY" id="NyT-06-Jnt"/>
+                                                <constraint firstItem="wp8-Js-dNN" firstAttribute="leading" secondItem="lOO-lf-GoS" secondAttribute="leading" constant="80" id="TJf-e8-2EI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wp8-Js-dNN" secondAttribute="bottom" constant="24" id="dgC-c5-FkV"/>
+                                                <constraint firstItem="wp8-Js-dNN" firstAttribute="top" secondItem="lOO-lf-GoS" secondAttribute="topMargin" constant="24" id="hqQ-uu-8Pf"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wp8-Js-dNN" secondAttribute="trailing" constant="16" id="zUK-N3-hzJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkSwitch" destination="1Vv-4Z-yVG" id="Cdf-l7-gNC"/>
+                                            <outlet property="titleLabel" destination="wp8-Js-dNN" id="cuN-jY-Yx8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mlY-bS-BaJ" secondAttribute="trailing" id="9ao-wb-NZc"/>
+                            <constraint firstItem="mlY-bS-BaJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9zJ-cy-mRB"/>
+                            <constraint firstItem="mlY-bS-BaJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mgx-9y-1k3"/>
+                            <constraint firstAttribute="bottom" secondItem="mlY-bS-BaJ" secondAttribute="bottom" id="VCE-fk-51u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="mlY-bS-BaJ" id="zqo-KJ-z9s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </scene>
+    </scenes>
+</document>
